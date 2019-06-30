@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.20.17/system.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Ruleta de la Suerte</title>
+</head>
+<body>
+    <script>
+        System.config({
+            packages: {
+                "dist": {
+                    "defaultExtension": "js",
+                    "main": "index"
+                }
+            },
+            map: {
+                'jquery': 'node_modules/jquery/dist/jquery.js'
+            }
+
+        })
+
+        System.import("dist");
+    </script>
+
+    <div class="container">
+        <div class="row mt-5">
+            <h2>Ruleta de la Suerte</h2> 
+        </div>
+        <div class="row mt-2">
+            <a href="./jugar.html" id="jugar" class="btn btn-success mt-2 col-7">Jugar</a>
+            <a href="./configurar.html" id="configurar" class="btn btn-warning mt-2 col-7">Configurar</a>   
+        </div>
+    </div>
+    
+</body>
+</html>

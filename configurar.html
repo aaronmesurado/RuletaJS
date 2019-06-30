@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/configuraciones.css">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <!-- Fin Fuentes-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.20.17/system.js"></script>
+    <title>Configuracion</title>
+</head>
+
+<body>
+    <script>
+        System.config({
+            packages: {
+                "dist": {
+                    "defaultExtension": "js",
+                    "main": "reglasConfiguracion"
+                }
+            },
+            map: {
+                'jquery': 'node_modules/jquery/dist/jquery.js'
+            }
+
+        })
+
+        System.import("dist");
+    </script>
+
+    <div class="container">
+        <div class="row mt-3">
+            <h2>Configuraciones</h2>
+        </div>
+        <div class="row mt-4">
+            <form action="./dist/configuracion.js" method="post">
+                <fieldset>
+                    <legend>Configuracion de la Partida</legend>
+                    <div class="form-group">
+                        <label>Número de Jugadores</label>
+                        <input type="number" name="numJugadores" id="numJugadores" min="2" max="4">
+                    </div>
+                    <div id="jugadores">
+                        
+                    </div>
+                    <div class="form-group mt-2">
+                        <label>Número de Rondas</label>
+                        <input type="number" name="numRondas" id="numRondas" min="2" max="5">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Bote Final</label>
+                        <input type="number" name="boteFinal" id="boteFinal">
+                    </div>
+    
+                    <input id="guardarConfiguracion" type="submit" class="btn btn-success" value="Guardar Cambios">
+                </fieldset>
+
+                <fieldset class="mt-5">
+                    <legend>Añadir Preguntas</legend>
+                    <div class="form-group">
+                        <label>Palabra</label>
+                        <input type="text" name="palabra" id="palabra" placeholder="Palabra a adivinar">
+                    </div>
+                    <div class="form-group">
+                        <label>Pista</label>
+                        <input type="text" name="pista" id="pista" placeholder="Pista">
+                    </div>
+                    <div class="form-group">
+                        <label>Tipo</label>
+                        <select name="tipo" id="tipo">
+                            <option value="normal">Normal</option>
+                            <option value="velocidad">Velocidad</option>
+                            <option value="bote">Bote</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <input id="insertarPregunta" type="submit" class="btn btn-success" value="Insertar Pregunta">
+            </form>
+        </div>
+        <a href="./index.html" class="btn btn-dark">Volver al Menu</a>
+    </div>
+
+</body>
+</html>

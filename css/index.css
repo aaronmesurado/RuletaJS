@@ -1,0 +1,6 @@
+body{
+    background-image: linear-gradient(-90deg, rgba(86,165,205,1), rgba(112,203,87,0.71));
+}
+h2, a{
+    margin: 0 auto;
+}

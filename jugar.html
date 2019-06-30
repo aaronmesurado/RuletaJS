@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/jugar.css">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+    <!-- Fin Fuentes-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.20.17/system.js"></script>
+    <title>Juego</title>
+</head>
+
+<body>
+
+    <script>
+        System.config({
+            packages: {
+                "dist": {
+                    "defaultExtension": "js",
+                    "main": "jugar"
+                }
+            },
+            map: {
+                'jquery': 'node_modules/jquery/dist/jquery.js'
+            }
+
+        })
+
+        System.import("dist");
+    </script>
+
+    <div class="container">
+        <div class="row">
+            <h3 id='numRondas'></h3>
+        </div>
+        <!--Fila en la que se encuentran los paneles de las letras y la ruleta-->
+        <div class="row">
+
+            <div id="panelLetras" class="col-sm-8 col-12">
+
+            </div>
+            <div id="panelRuleta" class="col-sm-4 col-12">
+                <div class="row">
+                    <canvas id="canvas" width="300" height="300"></canvas>
+                </div>
+                <div class="row">
+                    <input type="button" class="btn btn-info col-6" value="Girar Ruleta" id="girarRuleta">
+                    <h6 class="col-6" id="valorRuleta"></h6>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Fila en la que se encuentran las acciones que puede hacer el usuario-->
+        <div class="row justify-content-around">
+            <div id="accionesUsuario" class="col-7">
+                <input class="mt-4" type="text" name="letra" id="letra">
+                <input class="mt-4" name="consonante" id="consonante" class="btn" type="button" value="Consonante">
+                <input class="mt-4" name="compraVocal" id="compraVocal" class="btn" type="button" value="Comprar Vocal">
+            </div>
+        </div>
+
+        <!--Fila en la que se encuentran los datos de los jugadores-->
+        <div id="jugadores" class="row">
+
+        </div>
+
+        <!--Fila en la que se van a mostrar las letras que los jugadores hayan añadido-->
+        <div class="row">
+            <div id="pie" class="col-12">
+                <h5>Letras Usadas</h5>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <script src="./dist/funcionRuleta.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+body{
+    font-family: 'Merienda', cursive;
+    background: url("../images/config.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+h2, legend{
+    font-family: 'Staatliches', cursive;
+}
+form, h2{
+    margin: 0 auto;
+}
+#jugadores{
+    width: 470px;
+}
+a, #guardarConfiguracion, #insertarPregunta{
+    font-family: 'Bangers', cursive;
+}

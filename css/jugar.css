@@ -1,0 +1,69 @@
+body{
+    overflow-x: hidden;
+    background-image: linear-gradient(-90deg, rgba(86,165,205,1), rgba(112,203,87,0.71));
+    font-family: 'Merienda', cursive;
+}
+#panelLetras, #panelRuleta{
+    height: 350px;
+}
+#panelLetras{
+    border-right: 1px black solid;
+    border-bottom: 1px black solid;
+}
+#panelRuleta{
+    border-left: 1px black solid;
+    border-bottom: 1px black solid;
+}
+#accionesUsuario{
+    height: 100px;
+}
+#numRondas{
+    margin: 0 auto;
+}
+
+.jugador{
+    height: 150px;
+}
+
+table{
+    margin: 0 auto;
+    margin-top: 20px;
+    font-family: 'Staatliches', cursive;
+}
+td{
+    width: 60px;
+    height: 60px;
+    border: 0px solid black;
+    border-radius: 9px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+}
+caption{
+    color: black;
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    font-size: 1.75em;
+}
+.sinLetra{
+    background-color: lightcoral;
+}
+.conLetra, .cambiado{
+    background-color: lightblue;
+}
+
+.jugadorActivo{
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.55);
+}
+h5, h6{
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.5em;
+}
+h4{
+    font-family: 'Merienda', cursive;
+    font-weight: bolder;
+}
+#pie{
+    font-family: 'Merienda', cursive;
+    height: 60px;
+}
